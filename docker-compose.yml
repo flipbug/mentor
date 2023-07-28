@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    env_file: .env
+    volumes:
+      - ./mongo/data:/data/db
+    ports:
+      - 27017:27017
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    env_file: .env
+    ports:
+      - 8081:8081
+
+  payload:
+    build:
+      context: ./payload
+      target: dev
+      dockerfile: Dockerfile_dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./payload:/home/node/app
+      - ./payload/node_modules:/home/node/app/node_modules
+    depends_on:
+      - mongo
+    env_file: .env
+    environment:
+      PORT: 3000
+      NODE_ENV: development
