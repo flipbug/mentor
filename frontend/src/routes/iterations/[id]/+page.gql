@@ -1,0 +1,46 @@
+query getIteration($id: String!) {
+	Iteration(id: $id) {
+		id
+		name
+		theme
+		purpose
+		notes
+		startDate
+		endDate
+	}
+	Sessions(where: { iteration: { equals: $id } }) {
+		docs {
+			id
+			name
+			subject {
+				id
+				name
+				description
+			}
+			notes
+			updatedAt
+			createdAt
+			timeEntries {
+				timeEntries {
+					id
+					start
+					end
+					isRunning
+				}
+			}
+		}
+	}
+	Tags {
+		docs {
+			id
+			name
+		}
+	}
+	Subjects {
+		docs {
+			id
+			name
+			description
+		}
+	}
+}

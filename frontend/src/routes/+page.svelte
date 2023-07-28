@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import IterationCard from '$lib/components/IterationCard.svelte';
+
+	/* @type { import('./$houdini').PageData } */
+	export let data;
+
+	$: ({ allIterations } = data);
+</script>
+
+{#if $allIterations?.fetching }
+	<p>loading</p>
+{:else}
+	<div class="flex gap-4">
+		{#each $allIterations?.data?.Iterations.docs as iteration}
+			<IterationCard {iteration} />
+		{/each}
+	</div>
+{/if}

@@ -19,7 +19,6 @@ export default buildConfig({
   },
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
-    disable: true,
   },
 
   cors: "*",

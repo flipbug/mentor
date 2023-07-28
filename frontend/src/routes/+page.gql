@@ -1,0 +1,12 @@
+query allIterations {
+  Iterations(sort: "-startDate") {
+    docs {
+      id
+      name
+      theme
+      purpose
+      startDate
+      endDate
+    }
+  }
+}

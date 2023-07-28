@@ -31,7 +31,7 @@ const Iterations: CollectionConfig = {
     {
       name: "notes",
       type: "textarea",
-      required: true,
+      required: false,
     },
     {
       name: "startDate",
