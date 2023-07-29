@@ -17,7 +17,7 @@
 		><rect
 			width="36"
 			height="36"
-			fill="#ffb238"
+			fill="rgb(99, 102, 241)"
 			style="--darkreader-inline-fill: #aa6800;"
 			data-darkreader-inline-fill=""
 		/><rect
@@ -26,7 +26,7 @@
 			width="36"
 			height="36"
 			transform="translate(6 -2) rotate(116 18 18) scale(1.2)"
-			fill="#49007e"
+			fill="rgb(99, 102, 241)"
 			rx="6"
 			style="--darkreader-inline-fill: #3a0065;"
 			data-darkreader-inline-fill=""

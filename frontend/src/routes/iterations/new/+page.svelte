@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
 	import { enhance } from '$app/forms';
 	import Button from '$lib/components/Button.svelte';
 	import Input from '$lib/components/Input.svelte';
 
-	function getWeekNumber(date) {
+	function getWeekNumber(date: Date) {
 		var startOfYear = new Date(date.getFullYear(), 0, 1);
-		return Math.ceil(((date - startOfYear) / 86400000 + startOfYear.getDay() + 1) / 7);
+		return Math.ceil(
+			((date.getTime() - startOfYear.getTime()) / 86400000 + startOfYear.getDay() + 1) / 7
+		);
 	}
 
 	const today = new Date();
@@ -21,18 +23,18 @@
 		</div>
 
 		<div class="flex gap-5">
-			<Input placeholder="From" name="startDate" type="date" value={today.toISOString()} />
-			<Input placeholder="Until" name="endDate" type="date" />
+			<Input placeholder="From" name="startDate" type="date" value={today.toISOString()} required />
+			<Input placeholder="Until" name="endDate" type="date" required />
 		</div>
 
 		<div class="py-2">
 			<p class="text-xl mb-2">What do you want to focus on?</p>
-			<Input placeholder="Theme" name="theme"/>
+			<Input placeholder="Theme" name="theme" required />
 		</div>
 
 		<div class="py-2">
 			<p class="text-xl mb-2">Why?</p>
-			<Input placeholder="Purpose" name="purpose"/>
+			<Input placeholder="Purpose" name="purpose" required />
 		</div>
 
 		<Button type="submit">Create</Button>

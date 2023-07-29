@@ -16,6 +16,10 @@ query getIteration($id: String!) {
 				id
 				name
 				description
+				tags {
+					id
+					name
+				}
 			}
 			notes
 			updatedAt
@@ -28,19 +32,6 @@ query getIteration($id: String!) {
 					isRunning
 				}
 			}
-		}
-	}
-	Tags {
-		docs {
-			id
-			name
-		}
-	}
-	Subjects {
-		docs {
-			id
-			name
-			description
 		}
 	}
 }

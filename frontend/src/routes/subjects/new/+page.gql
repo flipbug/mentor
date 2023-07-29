@@ -1,0 +1,8 @@
+query allTags {
+	Tags {
+		docs {
+			id
+			name
+		}
+	}
+}

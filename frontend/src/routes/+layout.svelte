@@ -6,14 +6,11 @@
 
 <header>
 	<nav class="container mx-auto flex justify-between py-5">
-		<div class="text-3xl font-bold font-display"><a href="/">mentor</a></div>
+		<div class="text-3xl font-bold font-display"><a href="/">mentorio</a></div>
 		<div class="flex gap-10">
-			<a href="/iterations/new">
-			<Button>Create Iteration</Button>
-			</a>
-			<!-- <div class="h-5 w-5 rounded-full text-sm fon">
+			<div class="h-5 w-5 rounded-full text-sm mr-5">
 				<Avatar />
-			</div> -->
+			</div>
 		</div>
 	</nav>
 </header>

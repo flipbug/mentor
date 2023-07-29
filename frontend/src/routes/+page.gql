@@ -1,12 +1,18 @@
 query allIterations {
-  Iterations(sort: "-startDate") {
-    docs {
-      id
-      name
-      theme
-      purpose
-      startDate
-      endDate
-    }
-  }
+	Iterations(sort: "-startDate") {
+		docs {
+			id
+			name
+			theme
+			purpose
+			startDate
+			endDate
+		}
+	}
+	Tags {
+		docs {
+			id
+			name
+		}
+	}
 }
