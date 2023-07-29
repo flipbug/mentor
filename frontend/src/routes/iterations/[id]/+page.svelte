@@ -11,11 +11,6 @@
 
 	let editNotes = false;
 
-	function showSessionForm() {
-		addSession = true;
-		console.log(addSession);
-	}
-
 	$: ({ getIteration } = data);
 
 	$: iteration = $getIteration?.data?.Iteration;

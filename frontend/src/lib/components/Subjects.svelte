@@ -2,7 +2,6 @@
 	import { graphql } from '$houdini';
 	import PlusCircle from '$lib/icons/PlusCircle.svelte';
 	import Tag from '$lib/components/Tag.svelte';
-	import { enhance } from '$app/forms';
 
 	export let iterationId: string | null | undefined;
 
@@ -38,7 +37,7 @@
 {#if subjects}
 	{#each subjects as subject}
 		{#if iterationId}
-			<form method="post" action="/iterations/{iterationId}?/addSession" use:enhance>
+			<form method="post" action="/iterations/{iterationId}?/addSession">
 				<input type="hidden" name="subjectId" value={subject?.id} />
 				<button type="submit" class="w-full text-left">
 					<div

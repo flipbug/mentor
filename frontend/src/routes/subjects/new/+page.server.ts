@@ -34,6 +34,6 @@ export const actions = {
 			return fail(400, { error: result.errors.map((e) => e.message).join('; ') });
 		}
 
-		throw redirect(303, `/`);
+		throw redirect(307, `/`);
 	}
 };
