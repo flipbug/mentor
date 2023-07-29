@@ -1,6 +1,5 @@
 <script>
 	import Avatar from '$lib/components/Avatar.svelte';
-	import Button from '$lib/components/Button.svelte';
 	import '../app.css';
 </script>
 
@@ -14,7 +13,6 @@
 		</div>
 	</nav>
 </header>
-
 
 <main class="container mx-auto mt-10">
 	<slot />

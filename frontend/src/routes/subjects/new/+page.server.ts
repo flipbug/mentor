@@ -1,7 +1,6 @@
 import { graphql } from '$houdini';
 import { fail, redirect } from '@sveltejs/kit';
 
-/* @type { import('./$types').Actions } */
 export const actions = {
 	create: async (event) => {
 		const data = await event.request.formData();
@@ -34,6 +33,6 @@ export const actions = {
 			return fail(400, { error: result.errors.map((e) => e.message).join('; ') });
 		}
 
-		throw redirect(307, `/`);
+		throw redirect(303, `/`);
 	}
 };

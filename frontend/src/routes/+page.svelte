@@ -4,6 +4,7 @@
 	import IterationCard from '$lib/components/IterationCard.svelte';
 	import Subjects from '$lib/components/Subjects.svelte';
 	import CurrentIteration from '$lib/components/CurrentIteration.svelte';
+	import Report from '$lib/components/Report.svelte';
 	import InformationCircle from '$lib/icons/InformationCircle.svelte';
 	import Button from '$lib/components/Button.svelte';
 
@@ -25,6 +26,14 @@
 
 <div class="flex gap-4">
 	<div class="w-3/4">
+		<div class="mb-5">
+			<div class="font-display text-4xl font-bold">
+				Welcome back <span class="text-indigo-500">Daniel</span>!
+			</div>
+		</div>
+
+		<Report />
+
 		{#if currentIteration}
 			<CurrentIteration iteration={currentIteration} />
 		{:else}
