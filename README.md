@@ -1,14 +1,5 @@
 # Mentorio
 
-Web application to support my learning process and tech playground. 
+Web application to create a meta framework for learning. Built with SvelteKit, Houdini and Tailwindcss in the frontend and Payload CMS in the backend.
 
-## ToDos
-
-- User Authentication
-- Load only data for logged in user
-- Edit iterations
-- Update notes
-- Markdown support for notes
-- Image upload
-- Fix nullable fields in houdini typings or graphql schema
-- Variants for subjects?
+**Note:** This project was abandoned in favor of a rewrite in elixir/phoenix -> [check it out](https://github.com/flipbug/mentorio)
